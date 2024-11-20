@@ -1,6 +1,21 @@
 # Starter pipeline
 - task: Veracode Flaw Importer@3
   inputs:
+    ConnectionDetailsSelection: 'Credentials'
+    apiId: 'a78f8f006ab8608c3b6250e55b7b051f'
+    apiKey: '0bc7fda03726e57ce9b66dc59021bebc8c90afb130877c264e941ca4a0316baca00b46b21c87b95291494669b21d15f4d20abd145bd09d0d5ba975db8832fda2'
+    veracodeAppProfile: 'RRRTEST'
+    sandboxName: 
+    scanType: 'Dynamic and Static Analysis'
+    importType: 'All Unmitigated Flaws Violating Policy'
+    workItemType: 'Bug'
+    area: '$(system.teamProject)'
+    overwriteAreaPathInWorkItemsOnImport: true
+    iterationPath: '$(system.teamProject)'
+    overwriteIterationPath: true
+    flawImportLimit: '1000'
+- task: Veracode Flaw Importer@3
+  inputs:
     ConnectionDetailsSelection: 'Service Connection'
     veracodeAppProfile: '$(system.teamProject)'
     sandboxName: 
