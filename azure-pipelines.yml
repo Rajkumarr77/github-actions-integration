@@ -1,4 +1,12 @@
 # Starter pipeline
+- task: Veracode@3
+  inputs:
+    ConnectionDetailsSelection: 'Service Connection'
+    AnalysisService: 'Veracode'
+    veracodeAppProfile: 'RRRTEST'
+    version: 'TEST3'
+    filepath: 'target/verademo.war'
+    maximumWaitTime: '360'
 - task: Veracode Flaw Importer@3
   inputs:
     ConnectionDetailsSelection: 'Credentials'
