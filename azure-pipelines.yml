@@ -1,4 +1,17 @@
 # Starter pipeline
+- task: Veracode Flaw Importer@3
+  inputs:
+    ConnectionDetailsSelection: 'Service Connection'
+    veracodeAppProfile: '$(system.teamProject)'
+    sandboxName: 
+    scanType: 'Dynamic and Static Analysis'
+    importType: 'All Unmitigated Flaws Violating Policy'
+    workItemType: 'Bug'
+    area: '$(system.teamProject)'
+    overwriteAreaPathInWorkItemsOnImport: true
+    iterationPath: '$(system.teamProject)'
+    overwriteIterationPath: true
+    flawImportLimit: '100'
 - task: Veracode@3
   inputs:
     ConnectionDetailsSelection: 'Service Connection'
