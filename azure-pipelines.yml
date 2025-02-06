@@ -14,25 +14,25 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'ls -lrt'
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'app/pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
-- task: Veracode@3
-  inputs:
-    ConnectionDetailsSelection: 'Service Connection'
-    AnalysisService: 'Veracode'
-    veracodeAppProfile: 'RRRTEST'
-    version: 'TEST3'
-    filepath: 'app/target/verademo.war'
-    importResults: true
-    maximumWaitTime: '360'
+# - task: Maven@4
+#   inputs:
+#     mavenPomFile: 'app/pom.xml'
+#     publishJUnitResults: true
+#     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+#     javaHomeOption: 'JDKVersion'
+#     mavenVersionOption: 'Default'
+#     mavenAuthenticateFeed: false
+#     effectivePomSkip: false
+#     sonarQubeRunAnalysis: false
+# - task: Veracode@3
+#   inputs:
+#     ConnectionDetailsSelection: 'Service Connection'
+#     AnalysisService: 'Veracode'
+#     veracodeAppProfile: 'RRRTEST'
+#     version: 'TEST3'
+#     filepath: 'app/target/verademo.war'
+#     importResults: true
+#     maximumWaitTime: '360'
 
 - task: Veracode Flaw Importer@3
   inputs:
