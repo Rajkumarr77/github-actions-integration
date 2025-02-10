@@ -30,7 +30,7 @@ steps:
     AnalysisService: 'Veracode'
     veracodeAppProfile: 'RRRTEST'
     version: 'TEST3'
-    filepath: 'app/target/verademo.war'
+    filepath: 'target/verademo.war'
     importResults: true
     failBuildOnPolicyFail: true
     maximumWaitTime: '360'
