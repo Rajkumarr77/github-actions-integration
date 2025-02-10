@@ -32,6 +32,7 @@ steps:
     version: 'TEST3'
     filepath: 'app/target/verademo.war'
     importResults: true
+    failBuildOnPolicyFail: true
     maximumWaitTime: '360'
 
 - task: Veracode Flaw Importer@3
